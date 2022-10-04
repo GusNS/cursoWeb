@@ -2,7 +2,11 @@
 // Crie uma função que receba um array de produtos e retorne o total das despesas.
 
 const despesasTotais = (produtos) => {
-    console.log(produtos["preco"])
+    resultado = 0
+    produtos.forEach(e => {
+        resultado += e["preco"]
+    })
+    console.log(resultado)
 }
 
 despesasTotais([{
@@ -13,4 +17,14 @@ despesasTotais([{
     nome: "Cinema",
     categoria: "Entrenenimento",
     preco: 150
+}])
+
+despesasTotais([{
+    nome: "Galaxy S20",
+    categoria: "Eletrônicos",
+    preco: 3599.99
+}, {
+    nome: "Macbook Pro",
+    categoria: "Eletrônicos",
+    preco: 30999.90
 }])
